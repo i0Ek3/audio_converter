@@ -13,7 +13,7 @@ def convert(filename, savename, oformat):
     oformat:  file format you want to save as
     """
     afset = ["wav", "mp3", "mp4", "ogg", "flv", "raw", "m4a"]
-    
+
     splitstr = os.path.splitext(filename)[-1][1:]
     if splitstr not in afset or oformat not in afset:
         print("Wrong file format, exit!")
@@ -44,11 +44,18 @@ def switcher(filename):
         audio = AS.from_file(filename)
         return audio
 
-convert("planet.mp4", "planet.mp3", "mp3")
-# cannot convert mp4 to m4a, wav, flv, ogg, raw
-# we'll fix this issue later
-#convert("planet.mp4", "planet.m4a", "m4a")
-#convert("planet.mp4", "planet.wav", "wav")
-#convert("planet.mp4", "planet.flv", "flv")
-#convert("planet.mp4", "planet.ogg", "ogg")
-#convert("planet.mp4", "planet.raw", "raw")
+def main():
+    todo = input("Please input file to convert:")
+    save = todo[:-3]
+
+    # cannot convert mp4 to m4a, wav, flv, ogg, raw
+    # we'll fix this issue later
+    convert(todo, save+".mp3", "mp3")
+    #convert(todo, save+".m4a", "m4a")
+    #convert(todo, save+".wav", "wav")
+    #convert(todo, save+".flv", "flv")
+    #convert(todo, save+".ogg", "ogg")
+    #convert(todo, save+".raw", "raw")
+
+if __name__ == '__main__':
+    main()
