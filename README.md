@@ -8,9 +8,10 @@ I need fetch my recordings on my Pixel phone, but its' format is m4a not mp3 or 
 
 ## Usage
 
-~~Add your filename, savename and oformat in converter.py, and then run command `python3 audio_converter.py`. ~~
+~~Add your filename, savename and oformat in converter.py, and then run command `python3 audio_converter.py`~~.
 
-Input support.
+Run command `python3 audio_converter.py` and then follows the steps.
+
 
 ## TODO
 
